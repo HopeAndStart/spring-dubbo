@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.zsl</groupId>
+  <artifactId>spring-dubbo</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <name>spring-dubbo</name>
+
+  <modules>
+    <module>spring-dubbo-service</module>
+    <module>spring-dubbo-consumer</module>
+    <module>spring-dubbo-common</module>
+    <module>xml-provider</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!--项目模块版本控制-->
+    <spring.dubbo.service.version>1.0.0</spring.dubbo.service.version>
+    <spring.dubbo.common.version>1.0.0</spring.dubbo.common.version>
+    <!--Spring核心依赖版本控制-->
+    <spring.beans.version>5.1.6.RELEASE</spring.beans.version>
+    <spring.core.version>5.1.6.RELEASE</spring.core.version>
+    <spring.context.version>5.1.6.RELEASE</spring.context.version>
+    <!--WEB依赖版本控制-->
+    <spring.web.version>5.1.6.RELEASE</spring.web.version>
+    <spring.webmvc.version>5.1.6.RELEASE</spring.webmvc.version>
+    <!--Dubbo依赖版本控制-->
+    <org.apache.dubbo.version>2.7.1</org.apache.dubbo.version>
+    <!--MyBatis依赖版本控制-->
+    <spring.mybatis.version>1.3.2</spring.mybatis.version>
+    <mybatis.version>3.4.6</mybatis.version>
+    <!--MySQL依赖版本控制-->
+    <mysql.connect.version>8.0.13</mysql.connect.version>
+    <jdbc.version>4.3.14.RELEASE</jdbc.version>
+  </properties>
+
+  <!--定义项目公用依赖-->
+  <dependencyManagement>
+    <dependencies>
+
+      <!--服务发布接口模块依赖-->
+      <dependency>
+        <groupId>com.zsl</groupId>
+        <artifactId>spring-dubbo-service</artifactId>
+        <version>${spring.dubbo.service.version}</version>
+      </dependency>
+
+      <!--com.zsl.pojo、Mapper接口、枚举类等依赖模块-->
+      <dependency>
+        <groupId>com.zsl</groupId>
+        <artifactId>spring-dubbo-common</artifactId>
+        <version>${spring.dubbo.common.version}</version>
+      </dependency>
+
+
+      <!--Spring依赖-->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.beans.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.context.version}</version>
+      </dependency>
+
+      <!--Dubbo依赖-->
+      <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo</artifactId>
+        <version>${org.apache.dubbo.version}</version>
+      </dependency>
+
+      <!--WEB依赖-->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.web.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.webmvc.version}</version>
+      </dependency>
+
+      <!--MyBatis依赖-->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>${mybatis.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>${spring.mybatis.version}</version>
+      </dependency>
+
+      <!--MySQL依赖-->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.connect.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${jdbc.version}</version>
+      </dependency>
+
+      <!--阿里巴巴druid连接池依赖-->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>RELEASE</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+      </dependency>
+  </dependencies>
+
+</project>
