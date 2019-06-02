@@ -2,10 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
         <!--扫描包路径-->
-        <context:component-scan base-package="com.zsl.service"/>
+        <context:component-scan base-package="com.zsl.*"/>
 
         <!--引入数据库属性文件-->
         <context:property-placeholder location="classpath:jdbc.properties"/>
@@ -49,7 +51,7 @@
         <!--MyBatis配置-->
         <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
             <!--数据源-->
-            <property name="dataSource" value="dataSource"/>
+            <property name="dataSource" ref="dataSource"/>
             <!--SQL映射文件路径-->
             <property name="mapperLocations" value="classpath:mapper/*.xml"/>
             <!--指定MyBatis配置文件路径-->

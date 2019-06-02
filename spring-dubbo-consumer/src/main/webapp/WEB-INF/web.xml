@@ -6,7 +6,7 @@
 
          <!--加载Spring配置文件-->
         <listener>
-            <listener-class>org.springframework.context.ApplicationContext</listener-class>
+            <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
         </listener>
 
         <context-param>
