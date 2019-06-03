@@ -2,6 +2,7 @@ package com.zsl.controller;
 
 import com.zsl.pojo.Student;
 import com.zsl.service.DubboTestService;
+import com.zsl.service.RestTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,9 +20,18 @@ public class TestController {
     @Autowired
     private DubboTestService dubboTestService;
 
-    @RequestMapping("/test")
-    public Student testMethod(@RequestParam("id") Integer id){
+    @Autowired
+    private RestTestService restTestService;
+
+    @RequestMapping("/dubbo")
+    public Student dubboMethod(@RequestParam("id") Integer id){
         Student s = dubboTestService.dubboTestMethod(id);
         return s;
+    }
+
+    @RequestMapping("/rest")
+    public Student restMethod(@RequestParam("id") Integer id){
+        Student student = restTestService.restGetTestMethod(id);
+        return student;
     }
 }

@@ -3,6 +3,7 @@ package com.zsl.pojo;
 import java.io.Serializable;
 
 public class Student implements Serializable {
+
     private Integer id;
 
     private String name;
