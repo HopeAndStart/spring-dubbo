@@ -1,1 +1,2 @@
-service\DubboTestService.class
+com\zsl\service\DubboTestService.class
+com\zsl\service\RestTestService.class
