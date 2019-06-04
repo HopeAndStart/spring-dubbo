@@ -1,7 +1,10 @@
 package com.zsl.pojo;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement(name = "STUDENT")
 public class Student implements Serializable {
 
     private Integer id;
@@ -12,6 +15,7 @@ public class Student implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @XmlElement(name = "ID")
     public Integer getId() {
         return id;
     }
@@ -20,6 +24,7 @@ public class Student implements Serializable {
         this.id = id;
     }
 
+    @XmlElement(name = "NAME")
     public String getName() {
         return name;
     }
@@ -28,6 +33,7 @@ public class Student implements Serializable {
         this.name = name == null ? null : name.trim();
     }
 
+    @XmlElement(name = "AGE")
     public Integer getAge() {
         return age;
     }

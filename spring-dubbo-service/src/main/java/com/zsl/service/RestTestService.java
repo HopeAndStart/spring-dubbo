@@ -1,7 +1,9 @@
 package com.zsl.service;
 
 import com.zsl.pojo.Student;
+import org.apache.dubbo.rpc.protocol.rest.support.ContentType;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -12,8 +14,10 @@ import javax.ws.rs.core.MediaType;
  * @Modify:
  */
 @Path("rest")
-@Consumes({MediaType.APPLICATION_JSON,MediaType.TEXT_XML})
-@Produces({MediaType.APPLICATION_JSON,MediaType.TEXT_XML})
+@Consumes({ContentType.APPLICATION_JSON_UTF_8,ContentType.TEXT_XML_UTF_8})
+@Produces({ContentType.APPLICATION_JSON_UTF_8,ContentType.TEXT_XML_UTF_8})
+//@Consumes(MediaType.APPLICATION_JSON)
+//@Produces(MediaType.APPLICATION_JSON)
 public interface RestTestService{
 
     @GET

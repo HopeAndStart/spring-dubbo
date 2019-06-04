@@ -19,6 +19,7 @@ public class DubboTestServiceImpl implements DubboTestService {
     @Autowired
     private StudentMapper studentMapper;
 
+    @Override
     public Student dubboTestMethod(Integer id) {
         return studentMapper.selectByPrimaryKey(id);
     }

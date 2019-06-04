@@ -19,6 +19,12 @@
             <artifactId>spring-dubbo-common</artifactId>
         </dependency>
 
+        <!--Dubbo依赖使用ContentType定制入参、出参数据格式-->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+
         <!--Dubbo发布Rest服务依赖-->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
@@ -27,6 +33,16 @@
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
+        </dependency>
+
+        <!--JSON、XML序列化依赖-->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxb-provider</artifactId>
         </dependency>
 
     </dependencies>

@@ -10,7 +10,7 @@
     <dubbo:protocol id="dubbo" name="dubbo" port="20880"/>
 
     <!--Rest协议发布配置-->
-    <dubbo:protocol id="rest"  name="rest"  port="20882" server="tomcat"/>
+    <dubbo:protocol id="rest"  name="rest"  port="20882" server="tomcat" serialization="fst"/>
 
     <!--Zookeeper注册中心配置-->
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="localhost:2181"/>
