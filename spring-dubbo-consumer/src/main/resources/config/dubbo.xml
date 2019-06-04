@@ -12,7 +12,7 @@
     <!--Dubbo服务注入-->
     <dubbo:reference id="dubboTestService" interface="com.zsl.service.DubboTestService" protocol="dubbo" registry="zookeeper" check="true"/>
     <!--Rest服务注入-->
-    <dubbo:reference id="restTestService" interface="com.zsl.service.RestTestService"  protocol="rest" registry="zookeeper" check="true"/>
+    <dubbo:reference id="restTestService" interface="com.zsl.service.RestTestService"  protocol="rest"   registry="zookeeper" check="true"/>
 
 
 </beans>

@@ -4,9 +4,7 @@ import com.zsl.pojo.Student;
 import com.zsl.service.DubboTestService;
 import com.zsl.service.RestTestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author:zsl
@@ -15,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Modify:
  */
 @RestController
-public class TestController {
+@RequestMapping("/xml")
+public class XmlTestController {
 
     @Autowired
     private DubboTestService dubboTestService;
@@ -23,15 +22,21 @@ public class TestController {
     @Autowired
     private RestTestService restTestService;
 
-    @RequestMapping("/dubbo")
-    public Student dubboMethod(@RequestParam("id") Integer id){
+    @GetMapping("/dubbo/{id : \\d+}")
+    public Student dubboMethod(@PathVariable("id") Integer id){
         Student s = dubboTestService.dubboTestMethod(id);
         return s;
     }
 
-    @RequestMapping("/rest")
-    public Student restMethod(@RequestParam("id") Integer id){
+    @GetMapping("/rest/get/{id : \\d+}")
+    public Student restGetMethod(@PathVariable("id") Integer id){
         Student student = restTestService.restGetTestMethod(id);
         return student;
+    }
+    
+    @PostMapping("/rest/post")
+    public String  restPostMethod(@RequestBody Student student){
+        String s = restTestService.restPostTestMethod(student);
+        return s;
     }
 }

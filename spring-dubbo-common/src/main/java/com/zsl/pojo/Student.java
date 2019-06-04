@@ -4,18 +4,24 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+/**
+* TODO
+* @author zsl
+* @date: 2019/6/4 17:18
+* @version 1.0
+**/
 @XmlRootElement(name = "STUDENT")
 public class Student implements Serializable {
-
+    
+    private static final long serialVersionUID = 308909464352846617L;
+    
     private Integer id;
 
     private String name;
 
     private Integer age;
 
-    private static final long serialVersionUID = 1L;
-
-    @XmlElement(name = "ID")
+    @XmlElement
     public Integer getId() {
         return id;
     }
@@ -24,7 +30,7 @@ public class Student implements Serializable {
         this.id = id;
     }
 
-    @XmlElement(name = "NAME")
+    @XmlElement
     public String getName() {
         return name;
     }
@@ -33,7 +39,7 @@ public class Student implements Serializable {
         this.name = name == null ? null : name.trim();
     }
 
-    @XmlElement(name = "AGE")
+    @XmlElement
     public Integer getAge() {
         return age;
     }

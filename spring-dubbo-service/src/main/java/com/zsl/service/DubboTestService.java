@@ -13,7 +13,6 @@ import javax.ws.rs.Path;
  */
 @Path("dubbo")
 public interface DubboTestService {
-
     @GET
     @Path("dubboTestMethod")
     Student dubboTestMethod(Integer id);
