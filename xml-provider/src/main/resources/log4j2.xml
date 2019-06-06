@@ -12,11 +12,15 @@ packages="com.zsl">
             <AppenderRef ref="STDOUT"></AppenderRef>
         </Logger>
 
-        <Logger name="org.springframework" level="info">
+        <Logger name="org.springframework" level="info" additivity="false">
             <AppenderRef ref="STDOUT"></AppenderRef>
         </Logger>
 
-        <Logger name="org.apache.dubbo" level="trace">
+        <Logger name="org.apache.dubbo" level="info" additivity="false">
+            <AppenderRef ref="STDOUT"></AppenderRef>
+        </Logger>
+
+        <Logger name="org.mybatis" level="info" additivity="false">
             <AppenderRef ref="STDOUT"></AppenderRef>
         </Logger>
 

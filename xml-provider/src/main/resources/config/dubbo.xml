@@ -4,29 +4,29 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!--XML生产者应用信息-->
-    <dubbo:application name="xml-provider"/>
+    <dubbo:application name="xml-provider" logger="log4j2"/>
 
 
     <!--Dubbo协议发布配置-->
-    <dubbo:protocol id="dubbo" name="dubbo" port="20880" serialization="fst" optimizer="com.zsl.pojo.SerializationOptimizerImpl"/>
+    <dubbo:protocol id="dubboProtocol" name="dubbo" port="20880" />
 
     <!--Rest协议发布配置-->
-    <dubbo:protocol id="rest"  name="rest"  port="20882" server="tomcat"/>
+    <dubbo:protocol id="restProtocol"  name="rest"  port="20882" server="tomcat"/>
 
     <!--Zookeeper注册中心配置-->
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="localhost:2181"/>
     
     <!--发布Dubbo服务-->
     <dubbo:service interface="com.zsl.service.DubboTestService" ref="DubboTestServiceImpl">
-        <property name="protocol" ref="dubbo"/>
+        <property name="protocol" ref="dubboProtocol"/>
         <property name="registry" ref="zookeeper"/>
     </dubbo:service>
+
 
     <!--发布Rest服务-->
     <dubbo:service interface="com.zsl.service.RestTestService" ref="RestTestServiceImpl">
-        <property name="protocol" ref="rest"/>
+        <property name="protocol" ref="restProtocol"/>
         <property name="registry" ref="zookeeper"/>
     </dubbo:service>
-
 
 </beans>

@@ -22,13 +22,13 @@ public class XmlTestController {
     @Autowired
     private RestTestService restTestService;
 
-    @GetMapping("/dubbo/{id : \\d+}")
+    @GetMapping("/dubbo/{id}")
     public Student dubboMethod(@PathVariable("id") Integer id){
         Student s = dubboTestService.dubboTestMethod(id);
         return s;
     }
 
-    @GetMapping("/rest/get/{id : \\d+}")
+    @GetMapping("/rest/get/{id}")
     public Student restGetMethod(@PathVariable("id") Integer id){
         Student student = restTestService.restGetTestMethod(id);
         return student;
