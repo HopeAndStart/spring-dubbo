@@ -3,6 +3,8 @@ package com.zsl.controller;
 import com.zsl.pojo.Student;
 import com.zsl.service.DubboTestService;
 import com.zsl.service.RestTestService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/xml")
 public class XmlTestController {
+    
+    private static final Logger LOGGER = LogManager.getLogger(XmlTestController.class);
 
     @Autowired
     private DubboTestService dubboTestService;

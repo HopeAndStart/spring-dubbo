@@ -149,11 +149,13 @@
               <version>${curator.version}</version>
             </dependency>
 
+            <!--OkHttp框架依赖定义-->
             <dependency>
               <groupId>com.squareup.okhttp3</groupId>
               <artifactId>okhttp</artifactId>
               <version>${okhttp.version}</version>
             </dependency>
+
 
           </dependencies>
 
@@ -168,27 +170,19 @@
               <scope>test</scope>
             </dependency>
 
-          <!--log4j2日志依赖-->
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j2.verison}</version>
-          </dependency>
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j2.verison}</version>
-          </dependency>
+          <!--log4j2日志核心依赖-->
           <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-web</artifactId>
             <version>${log4j2.verison}</version>
           </dependency>
+          <!--slf4j转换-->
           <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${log4j2.verison}</version>
           </dependency>
+          <!--commons.logging转换-->
           <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-jcl</artifactId>
