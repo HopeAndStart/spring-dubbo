@@ -7,13 +7,11 @@
         <groupId>com.zsl</groupId>
         <version>1.0.0</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zsl</groupId>
-    <artifactId>spring-dubbo-consumer</artifactId>
-    <name>spring-dubbo-consumer</name>
-    <version>1.0.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>configuration-sample</artifactId>
     <packaging>jar</packaging>
+    <version>1.0</version>
 
     <dependencies>
 
@@ -21,6 +19,7 @@
         <dependency>
             <groupId>com.zsl</groupId>
             <artifactId>spring-dubbo-service</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
         <!--WEB依赖-->
@@ -30,4 +29,6 @@
         </dependency>
 
     </dependencies>
+
+    
 </project>

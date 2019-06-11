@@ -17,14 +17,14 @@
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="localhost:2181"/>
     
     <!--发布Dubbo服务-->
-    <dubbo:service interface="com.zsl.service.DubboTestService" ref="DubboTestServiceImpl">
+    <dubbo:service interface="com.zsl.service.xml.DubboTestService" ref="DubboTestServiceImpl">
         <property name="protocol" ref="dubboProtocol"/>
         <property name="registry" ref="zookeeper"/>
     </dubbo:service>
 
 
     <!--发布Rest服务-->
-    <dubbo:service interface="com.zsl.service.RestTestService" ref="RestTestServiceImpl">
+    <dubbo:service interface="com.zsl.service.xml.RestTestService" ref="RestTestServiceImpl">
         <property name="protocol" ref="restProtocol"/>
         <property name="registry" ref="zookeeper"/>
     </dubbo:service>

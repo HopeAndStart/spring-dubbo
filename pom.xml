@@ -12,10 +12,11 @@
         <name>spring-dubbo</name>
 
         <modules>
-          <module>spring-dubbo-service</module>
-          <module>spring-dubbo-consumer</module>
-          <module>spring-dubbo-common</module>
-          <module>xml-provider</module>
+            <module>spring-dubbo-service</module>
+            <module>spring-dubbo-consumer</module>
+            <module>spring-dubbo-common</module>
+            <module>xml-provider</module>
+            <module>configuration-sample</module>
         </modules>
 
         <properties>
@@ -156,43 +157,41 @@
               <version>${okhttp.version}</version>
             </dependency>
 
-
+            <!--log4j2日志核心依赖-->
+            <dependency>
+              <groupId>org.apache.logging.log4j</groupId>
+              <artifactId>log4j-web</artifactId>
+              <version>${log4j2.verison}</version>
+            </dependency>
+            <!--slf4j转换-->
+            <dependency>
+              <groupId>org.apache.logging.log4j</groupId>
+              <artifactId>log4j-slf4j-impl</artifactId>
+              <version>${log4j2.verison}</version>
+            </dependency>
+            <!--commons.logging转换-->
+            <dependency>
+              <groupId>org.apache.logging.log4j</groupId>
+              <artifactId>log4j-jcl</artifactId>
+              <version>${log4j2.verison}</version>
+            </dependency>
+            
           </dependencies>
 
         </dependencyManagement>
 
         <dependencies>
-
             <dependency>
               <groupId>junit</groupId>
               <artifactId>junit</artifactId>
               <version>4.11</version>
               <scope>test</scope>
             </dependency>
-
-          <!--log4j2日志核心依赖-->
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-web</artifactId>
-            <version>${log4j2.verison}</version>
-          </dependency>
-          <!--slf4j转换-->
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j2.verison}</version>
-          </dependency>
-          <!--commons.logging转换-->
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-jcl</artifactId>
-            <version>${log4j2.verison}</version>
-          </dependency>
         </dependencies>
 
         <build>
           <plugins>
-            <!--限定JDK版本-->
+            <!--限定编译JDK版本-->
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>

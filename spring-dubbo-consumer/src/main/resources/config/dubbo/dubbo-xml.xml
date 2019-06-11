@@ -4,16 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!--XML生产者应用信息-->
-    <dubbo:application name="spring-dubbo-consumer"/>
+    <dubbo:application name="spring-dubbo-consumer" logger="log4j2"/>
 
     <!--Zookeeper注册中心配置-->
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="localhost:2181"/>
 
     <!--Dubbo服务注入-->
-    <dubbo:reference id="dubboTestService" interface="com.zsl.service.DubboTestService"
+    <dubbo:reference id="dubboTestService" interface="com.zsl.service.xml.DubboTestService"
                      protocol="dubbo" registry="zookeeper" check="true"/>
     <!--Rest服务注入-->
-    <dubbo:reference id="restTestService" interface="com.zsl.service.RestTestService"
+    <dubbo:reference id="restTestService" interface="com.zsl.service.xml.RestTestService"
                      protocol="rest"   registry="zookeeper" check="true"/>
 
 

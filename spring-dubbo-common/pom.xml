@@ -17,11 +17,14 @@
     <version>1.0.0</version>
 
     <dependencies>
+
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-maven-plugin</artifactId>
             <version>1.3.2</version>
         </dependency>
+
+        <!--Dubbo依赖用于构建FST序列化-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>

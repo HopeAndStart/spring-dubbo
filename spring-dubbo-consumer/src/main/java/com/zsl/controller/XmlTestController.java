@@ -1,8 +1,8 @@
 package com.zsl.controller;
 
 import com.zsl.pojo.Student;
-import com.zsl.service.DubboTestService;
-import com.zsl.service.RestTestService;
+import com.zsl.service.xml.DubboTestService;
+import com.zsl.service.xml.RestTestService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
