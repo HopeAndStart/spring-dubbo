@@ -10,6 +10,6 @@
         </context:component-scan>
 
         <!--加载Dubbo-->
-        <!--<import resource="classpath:config/dubbo-xml.xml"/>-->
-        <import resource="dubbo/dubbo-check.xml"/>
+        <import resource="dubbo/dubbo-xml.xml"/>
+        <!-- <import resource="dubbo/dubbo-check.xml"/>-->
 </beans>

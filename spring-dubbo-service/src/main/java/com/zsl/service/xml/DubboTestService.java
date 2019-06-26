@@ -11,9 +11,8 @@ import javax.ws.rs.Path;
  * @Date:Create in 2019/6/2 18:09
  * @Modify:
  */
-@Path("dubbo")
 public interface DubboTestService {
-    @GET
-    @Path("dubboTestMethod")
+
     Student dubboTestMethod(Integer id);
+
 }

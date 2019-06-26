@@ -70,5 +70,4 @@
 
         <import resource="dubbo.xml"/>
 
-
 </beans>

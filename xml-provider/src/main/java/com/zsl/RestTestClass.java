@@ -11,12 +11,24 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class RestTestClass {
 
-    public static void main(String args[]) throws IOException {
-        String methodTest = getMethodTest();
-        System.out.println(methodTest);
+
+
+    public static void main(String args[]) throws IOException{
+
+        System.out.println(111);
+
+
+
+//        String methodTest = getMethodTest();
+//        System.out.println(methodTest);
+
 //        Student s = new Student();
 //        s.setId(7);
 //        s.setAge(18);
