@@ -7,11 +7,11 @@
         <groupId>com.zsl</groupId>
         <version>1.0.0</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zsl</groupId>
-    <artifactId>spring-dubbo-consumer</artifactId>
-    <name>spring-dubbo-consumer</name>
+    <artifactId>protocol-consumer</artifactId>
+    <name>protocol-consumer</name>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 

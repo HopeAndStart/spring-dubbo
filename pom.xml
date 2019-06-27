@@ -13,10 +13,10 @@
 
         <modules>
             <module>spring-dubbo-service</module>
-            <module>spring-dubbo-consumer</module>
+            <module>protocol-consumer</module>
             <module>spring-dubbo-common</module>
-            <module>xml-provider</module>
-            <module>configuration-sample</module>
+            <module>protocol-provider</module>
+            <module>timeout-provider</module>
         </modules>
 
         <properties>

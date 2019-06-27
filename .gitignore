@@ -1,11 +1,16 @@
 # Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
 
 # IntelliJ project files
 .idea
 *.iml
 out
 gen
-xml-provider/target
-spring-dubbo-common/target
-spring-dubbo-consumer/target
-spring-dubbo-service/target
+.gitignore
+.idea/
+protocol-consumer/protocol-consumer.iml
+protocol-provider/target/generated-sources/
+spring-dubbo-common/spring-dubbo-common.iml
+spring-dubbo-service/spring-dubbo-service.iml
+spring-dubbo.iml
