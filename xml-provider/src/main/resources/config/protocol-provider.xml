@@ -10,19 +10,14 @@
     <!--Dubbo协议发布配置-->
     <dubbo:protocol id="dubboProtocol" name="dubbo" port="20880" />
 
-    <!--Rest协议发布配置-->
-    <dubbo:protocol id="restProtocol"  name="rest"  port="20882" server="tomcat"/>
-
     <!--Zookeeper注册中心配置-->
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="localhost:2181"/>
     
     <!--发布Dubbo服务-->
-    <dubbo:service interface="com.zsl.service.xml.DubboTestService" ref="DubboTestServiceImpl"
+    <dubbo:service interface="com.zsl.service.protocol.DubboProtocolService" ref="DubboProtocolServiceImpl"
                    protocol="dubboProtocol" registry="zookeeper" timeout="10000" retries="0" />
 
-    <!--发布Rest服务-->
-    <dubbo:service interface="com.zsl.service.xml.RestTestService" ref="RestTestServiceImpl"
-                   protocol="restProtocol" registry="zookeeper"/>
+
 
 
 </beans>

@@ -20,6 +20,10 @@
             <AppenderRef ref="STDOUT"/>
         </Logger>
 
+        <Logger name="com.zsl.mapper" level="debug" additivity="false">
+            <AppenderRef ref="STDOUT"/>
+        </Logger>
+
         <Root>
             <AppenderRef ref="STDOUT"></AppenderRef>
         </Root>

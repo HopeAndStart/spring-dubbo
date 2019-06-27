@@ -7,14 +7,14 @@
     <dubbo:application name="configuration-sample" logger="log4j2"/>
 
     <!--定义注册中心启动检查是否存在-->
-    <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost" port="2181"
+    <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost:2181"
                     check="true"/>
 
     <!--定义发布协议-->
     <dubbo:protocol id="dubboProtocol" name="dubbo" port="20880"/>
 
     <!--定义服务发布-->
-    <dubbo:service interface="com.zsl.service.impl.SampleDubboServiceImpl" ref="SampleDubboServiceImpl"
-                   protocol="dubboProtocol" registry="zookeeperRegistry"/>
+    <dubbo:service interface="com.zsl.service.sample.SampleDubboService" ref="SampleDubboServiceImpl"
+                   protocol="dubboProtocol" registry="zookeeperRegistry" />
 
 </beans>

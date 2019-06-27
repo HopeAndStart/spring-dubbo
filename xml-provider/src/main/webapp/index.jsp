@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
- <h1>生产者启动成功</h1>
+ <h1>Dubbo协议测试生产者启动成功</h1>
   </body>
 </html>

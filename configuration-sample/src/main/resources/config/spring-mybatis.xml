@@ -10,7 +10,7 @@
         <!-- 开启驼峰映射规则-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!-- 输出sql语句 -->
-        <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="LOG4J2"/>
     </settings>
 
 </configuration>

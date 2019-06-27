@@ -68,6 +68,6 @@
             <property name="basePackage" value="com.zsl.mapper"/>
         </bean>
 
-        <import resource="dubbo.xml"/>
+        <import resource="xml-provider-dubbo.xml"/>
 
 </beans>

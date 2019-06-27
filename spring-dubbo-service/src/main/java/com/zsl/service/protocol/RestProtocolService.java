@@ -1,4 +1,4 @@
-package com.zsl.service.xml;
+package com.zsl.service.protocol;
 
 import com.zsl.pojo.Student;
 import org.apache.dubbo.rpc.protocol.rest.support.ContentType;
@@ -14,7 +14,7 @@ import javax.ws.rs.*;
 @Path("rest")
 @Consumes({ContentType.APPLICATION_JSON_UTF_8,ContentType.TEXT_XML_UTF_8})
 @Produces({ContentType.APPLICATION_JSON_UTF_8,ContentType.TEXT_XML_UTF_8})
-public interface RestTestService{
+public interface RestProtocolService {
 
     @GET
     @Path("{id : \\d+}")

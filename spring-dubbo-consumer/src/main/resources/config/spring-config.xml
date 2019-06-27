@@ -10,6 +10,5 @@
         </context:component-scan>
 
         <!--加载Dubbo-->
-        <import resource="dubbo/dubbo-xml.xml"/>
-        <!-- <import resource="dubbo/dubbo-check.xml"/>-->
+        <import resource="classpath:config/protocol-consumer.xml"/>
 </beans>
