@@ -1,6 +1,7 @@
 package com.zsl.controller;
 
 import com.zsl.service.protocol.DubboProtocolService;
+import com.zsl.service.protocol.RestProtocolService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,18 +17,37 @@ import org.springframework.web.bind.annotation.RestController;
 * @version 1.0
 **/
 @RestController
-@RequestMapping("/dubbo")
+@RequestMapping("/protocol")
 public class ProtocolController {
     
     private static final Logger LOGGER = LogManager.getLogger(ProtocolController.class);
 
     @Autowired
     private DubboProtocolService dubboProtocolService;
+    
+    @Autowired
+    private RestProtocolService restProtocolService;
 
 
-    @GetMapping("/{id}")
-    public String dubboMethod(@PathVariable("id") Integer id) {
+    /**
+    * TODO 测试dubbo协议发布服务
+    * @author zsl
+    * @date 2019/6/27 11:04
+    **/
+    @GetMapping("dubbo/{id}")
+    public String dubboGetMethod(@PathVariable("id") Integer id) {
         String s = dubboProtocolService.dubboProtocolGetMethod(id);
+        return s;
+    }
+    
+    /**
+    * TODO 测试Rest协议发布服务
+    * @author zsl
+    * @date 2019/6/27 11:05
+    **/
+    @GetMapping("rest/{id}")
+    public String restGetMethod(@PathVariable("id") Integer id){
+        String s = restProtocolService.restProtocolGetMethod(id);
         return s;
     }
 }

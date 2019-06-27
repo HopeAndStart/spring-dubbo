@@ -6,15 +6,20 @@
     <!--定义服务-->
     <dubbo:application name="configuration-sample" logger="log4j2"/>
 
+    <!--全局配置-->
+    <dubbo:provider id="timeOutProvider"/>
+
     <!--定义注册中心启动检查是否存在-->
-    <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost:2181"
-                    check="true"/>
+    <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost:2181"/>
 
     <!--定义发布协议-->
-    <dubbo:protocol id="dubboProtocol" name="dubbo" port="20880"/>
+    <dubbo:protocol id="dubboProtocol" name="dubbo" port="20881"/>
 
     <!--定义服务发布-->
-    <dubbo:service interface="com.zsl.service.sample.TimeOuitService" ref="SampleDubboServiceImpl"
-                   protocol="dubboProtocol" registry="zookeeperRegistry" />
+    <dubbo:service interface="com.zsl.service.sample.TimeOutService" ref="TimeOutServiceImpl"
+                   protocol="dubboProtocol" registry="zookeeperRegistry" provider="timeOutProvider">
+        <dubbo:method name="timeOutGetMethod" timeout="3000" />
+        <dubbo:method name="timeOutAddMethod" timeout="3000" retries="0"/>
+    </dubbo:service>
 
 </beans>

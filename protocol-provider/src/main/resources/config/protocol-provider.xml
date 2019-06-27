@@ -6,18 +6,22 @@
     <!--XML生产者应用信息-->
     <dubbo:application name="xml-provider" logger="log4j2"/>
 
-
     <!--Dubbo协议发布配置-->
     <dubbo:protocol id="dubboProtocol" name="dubbo" port="20880" />
 
+    <!--Rest协议发布配置-->
+    <dubbo:protocol id="restProtocol" name="rest" port="20882" server="tomcat"/>
+
     <!--Zookeeper注册中心配置-->
-    <dubbo:registry id="zookeeper" protocol="zookeeper" address="localhost:2181"/>
+    <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost:2181"/>
     
     <!--发布Dubbo服务-->
     <dubbo:service interface="com.zsl.service.protocol.DubboProtocolService" ref="DubboProtocolServiceImpl"
-                   protocol="dubboProtocol" registry="zookeeper" timeout="10000" retries="0" />
+                   protocol="dubboProtocol" registry="zookeeperRegistry"/>
 
 
-
+    <!--发布Rest服务-->
+    <dubbo:service interface="com.zsl.service.protocol.RestProtocolService" ref="RestProtocolServiceImpl"
+                   protocol="restProtocol" registry="zookeeperRegistry"/>
 
 </beans>

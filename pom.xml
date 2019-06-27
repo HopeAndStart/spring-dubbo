@@ -17,6 +17,7 @@
             <module>spring-dubbo-common</module>
             <module>protocol-provider</module>
             <module>timeout-provider</module>
+            <module>timeout-consumer</module>
         </modules>
 
         <properties>

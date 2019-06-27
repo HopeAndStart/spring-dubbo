@@ -7,18 +7,14 @@
     <dubbo:application name="spring-dubbo-consumer" logger="log4j2">
         <dubbo:parameter key="qos.enable" value="true"/>
         <dubbo:parameter key="qos.accept.foreign.ip" value="false"/>
-        <dubbo:parameter key="qos.port" value="33333"/>
+        <dubbo:parameter key="qos.port" value="44444"/>
     </dubbo:application>
 
     <!--Zookeeper注册中心配置-->
     <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost:2181"/>
 
     <!--Dubbo服务注入-->
-    <dubbo:reference id="dubboProtocolService" interface="com.zsl.service.protocol.DubboProtocolService"
-                     protocol="dubbo" registry="zookeeperRegistry" />
-
-    <!--Rest服务注入-->
-    <dubbo:reference id="restProtocolService" interface="com.zsl.service.protocol.RestProtocolService"
-                     protocol="rest" registry="zookeeperRegistry"/>
+    <dubbo:reference id="timeOutService" interface="com.zsl.service.sample.TimeOutService"
+                     protocol="dubbo" registry="zookeeperRegistry"/>
 
 </beans>
