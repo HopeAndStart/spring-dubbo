@@ -17,9 +17,6 @@
 
     <!--定义服务发布-->
     <dubbo:service interface="com.zsl.service.sample.TimeOutService" ref="TimeOutServiceImpl"
-                   protocol="dubboProtocol" registry="zookeeperRegistry" provider="timeOutProvider">
-        <dubbo:method name="timeOutGetMethod" timeout="3000" />
-        <dubbo:method name="timeOutAddMethod" timeout="3000" retries="0"/>
-    </dubbo:service>
+                   protocol="dubboProtocol" registry="zookeeperRegistry" provider="timeOutProvider"/>
 
 </beans>
