@@ -4,7 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!--XML生产者应用信息-->
-    <dubbo:application name="xml-provider" logger="log4j2"/>
+    <dubbo:application name="spring-dubbo-provider" logger="log4j2"/>
+
+    <!--monitor监控中心配置-->
+    <dubbo:monitor protocol="registry"/>
 
     <!--Dubbo协议发布配置-->
     <dubbo:protocol id="dubboProtocol" name="dubbo" port="20880" />

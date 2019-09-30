@@ -10,6 +10,9 @@
         <dubbo:parameter key="qos.port" value="33333"/>
     </dubbo:application>
 
+    <!--配置Monitor监控-->
+    <dubbo:monitor protocol="registry"/>
+
     <!--Zookeeper注册中心配置-->
     <dubbo:registry id="zookeeperRegistry" protocol="zookeeper" address="localhost:2181"/>
 
