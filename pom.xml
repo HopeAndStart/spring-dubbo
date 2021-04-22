@@ -33,7 +33,7 @@
           <resteasy.client.version>3.7.0.Final</resteasy.client.version>
           <!--MyBatis依赖版本控制-->
           <spring.mybatis.version>1.3.2</spring.mybatis.version>
-          <mybatis.version>3.4.6</mybatis.version>
+          <mybatis.version>3.5.6</mybatis.version>
           <!--MySQL依赖版本控制-->
           <mysql.connect.version>8.0.13</mysql.connect.version>
           <jdbc.version>4.3.14.RELEASE</jdbc.version>
